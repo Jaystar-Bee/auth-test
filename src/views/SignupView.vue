@@ -22,13 +22,10 @@
       </div>
 
       <div class="form-field">
-        <button class="btn" type="submit">Log in</button>
+        <button class="btn" type="submit">Sign Up</button>
       </div>
       <div>
-        <p>
-          Don't have an Account?
-          <router-link to="/signup">Click here to Sign up</router-link>
-        </p>
+        <p>Already have an Account? <router-link to="/login">Click here to login</router-link></p>
       </div>
     </form>
   </div>
@@ -43,12 +40,12 @@ export default {
     };
   },
   methods: {
-     loginUser() {
+    async loginUser() {
       const user = {
         userId: "dweidwefiejwf",
         userEmail: this.email,
       };
-       this.$store.dispatch("loginUser", user);
+      await this.$store.dispatch("loginUser", user);
       this.$router.push("/");
     },
   },
