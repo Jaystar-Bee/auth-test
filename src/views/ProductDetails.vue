@@ -1,4 +1,7 @@
 <template>
+  <div>
+    <router-link to="/products"><p>Back</p></router-link>
+  </div>
   <div v-if="currentProduct">
     <img :src="currentProduct.image" alt="" />
     <h1>{{ currentProduct.name }}</h1>
